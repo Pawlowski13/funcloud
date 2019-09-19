@@ -7,7 +7,7 @@ export default () => (
         <li><Link href="/"><a href="/"><i className="fas fa-home btn-lg"></i>Home</a></Link></li>
         <li><Link href="/posts"><a href="/posts"><i className="fas fa-align-left btn-lg"></i>Posts</a></Link></li>
         <li><Link href="/contact"><a href="/contact"><i className="far fa-envelope btn-lg"></i>Contact</a></Link></li>
-        <li><Link href="https://github.com/zeit/next.js"><a><i className="fab fa-github btn-lg"></i>Github</a></Link></li>
+        <li><Link href="https://github.com/Pawlowski13/funcloud"><a><i className="fab fa-github btn-lg"></i>Github</a></Link></li>
     </ul>
     
     <style jsx>{`
