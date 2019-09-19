@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-express",
+  "name": "funcloud",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,26 @@
     "start": "next start",
     "deploy": "NODE_ENV=production next build && NODE_ENV=production node ./server.js"
   },
-  "author": "doobix",
+  "author": "Marcin Pawłowski",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4",
-    "next": "^8.0.3",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "axios": "^0.19.0",
+    "dotenv": "^8.1.0",
+    "dotenv-load": "^2.0.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
+    "next": "^9.0.5",
+    "next-env": "^1.1.0",
+    "next-routes": "^1.4.2",
+    "next-runtime-dotenv": "^1.2.0",
+    "nuka-carousel": "^4.5.11",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-emoji-render": "^1.0.0",
+    "react-moment": "^0.9.2"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^1.7.0"
   }
 }

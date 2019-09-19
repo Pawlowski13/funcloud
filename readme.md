@@ -1,9 +1,12 @@
-# nextjs-express-demo
+# FunCloud
 
-This is a demo repo showing how to use an Express server with Next.js.
+This is a template repo for Headless Wordpress FunCloud blog site.
 
-Use `npm install` and then `npm run dev` to start the dev server.
+## Tech stack:
+Next.js, React, Express, Node.js, Axios, Moment.js, React-emoji-render, Nuka-carousel, WP-API and Formspree.
 
-In the browser, visit [http://localhost:3000](http://localhost:3000) to see the dev server.
+Use `npm install` and then `yarn dev` to start the dev server.
 
-For more information, including how to deploy it to Elastic Beanstalk, check out my blog post: [https://www.seewes.com/2019/04/07/deploying-next-js-with-express-on-elastic-beanstalk/](https://www.seewes.com/2019/04/07/deploying-next-js-with-express-on-elastic-beanstalk/)
+In the browser, visit [http://localhost:8080](http://localhost:8080) to see the dev server.
+
+For more information, including how to deploy it to Elastic Beanstalk, send me email from contact page and I will let you know in the next 2-3 days ;)

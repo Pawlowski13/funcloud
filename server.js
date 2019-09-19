@@ -1,29 +1,31 @@
-const express = require('express');
-const next = require('next');
+const express = require( 'express' );
+const next = require( 'next' );
 
-const dev = process.env.NODE_ENV !== 'production';
-const port = process.env.PORT || 3000;
-const app = next({ dev });
+const routes = require( './routes' );
+
+const app = next( { dev: 'production' !== process.env.NODE_ENV } );
 const handle = app.getRequestHandler();
+const handler = routes.getRequestHandler( app );
 
 app.prepare()
-.then(() => {
-  const server = express();
+    .then( () => {
 
-  server.get('/test', (req, res) => {
-    res.send('Hello from express!', 200);
-  });
+        const serverInstance = express();
 
-  server.get('*', (req, res) => {
-    return handle(req, res);
-  });
-    
-  server.listen(port, (err) => {
-    if (err) throw err;
-    console.log(`> Ready on http://localhost:${port}`);
-  });
-})
-.catch((ex) => {
-  console.error(ex.stack);
-  process.exit(1);
-});
+        serverInstance.use( handler );
+
+        //Default route for server.
+        serverInstance.get( '*', ( req, res ) => {
+            return handle( req, res);
+        } );
+
+        const currentPort = process.env.PORT || 8080;
+
+        serverInstance.listen( currentPort, err => {
+            if (err) {
+                throw err;
+            }
+
+            console.log( ` > Listen on port ${currentPort}...` );
+        } );
+    } );
